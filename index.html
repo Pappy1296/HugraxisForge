@@ -13,6 +13,41 @@
             padding: 0;
         }
 
+        nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 30px;
+    background: #0b0f14;
+    border-bottom: 1px solid #26323d;
+}
+
+.nav-brand {
+    color: #e8f0f7;
+    font-weight: bold;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links a {
+    color: #aebbc7;
+    text-decoration: none;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.nav-links a:hover {
+    color: #70c9e8;
+}
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #0b0f14;
@@ -113,7 +148,20 @@
         }
 
         @media (max-width: 600px) {
-            header {
+
+    nav {
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 18px;
+    }
+
+    .nav-links {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    header {
                 min-height: 60vh;
             }
 
@@ -138,7 +186,18 @@
 
 <body>
 
-    <header>
+    <nav>
+        <div class="nav-brand">HugraxisForge Studio</div>
+
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#projects">Projects</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </nav>
+
+    <header id="home">
         <h1>HugraxisForge Studio</h1>
         <p>Independent games, software & experiments.</p>
     </header>
@@ -153,8 +212,8 @@
             </p>
         </section>
 
-        <section>
-    <h2>Projects</h2>
+    <section id="projects">
+        <h2>Projects</h2>
 
     <article>
         <h3>FactoryMancer</h3>
@@ -193,10 +252,8 @@
 
 </section>
 
-        </section>
-
-        <section>
-            <h2>About HugraxisForge Studio</h2>
+         <section id="about">
+            <h2>About HugraxisForge</h2>
             <p>
                 HugraxisForge studio is a small independent development
                 studio focused on building original software and games from
@@ -204,7 +261,7 @@
             </p>
         </section>
 
-        <section>
+        <section id="contact">
             <h2>Contact</h2>
             <p>
                 More information and project links will be added here.
