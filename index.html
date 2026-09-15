@@ -1,9 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
+    
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HugraxisForge</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #d8e0e8;
+            line-height: 1.7;
+        }
+
+        header {
+            min-height: 70vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 1px solid #26323d;
+            background:
+                linear-gradient(rgba(11, 15, 20, 0.92), rgba(11, 15, 20, 0.96)),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 39px,
+                    #18222c 40px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 39px,
+                    #18222c 40px
+                );
+        }
+
+        header h1 {
+            font-size: clamp(3rem, 8vw, 6rem);
+            letter-spacing: 0.08em;
+            color: #e8f0f7;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #70c9e8;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 25px;
+        }
+
+        section {
+            margin-bottom: 90px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #e8f0f7;
+            margin-bottom: 25px;
+            letter-spacing: 0.06em;
+            border-left: 3px solid #70c9e8;
+            padding-left: 15px;
+        }
+
+        section p {
+            max-width: 800px;
+            color: #aebbc7;
+        }
+
+        article {
+            background: #111820;
+            border: 1px solid #26323d;
+            border-radius: 6px;
+            padding: 30px;
+            margin-top: 20px;
+            transition: border-color 0.2s ease, transform 0.2s ease;
+        }
+
+        article:hover {
+            border-color: #70c9e8;
+            transform: translateY(-3px);
+        }
+
+        article h3 {
+            color: #70c9e8;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px solid #26323d;
+            color: #71808c;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                min-height: 60vh;
+            }
+
+            header h1 {
+                letter-spacing: 0.04em;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            main {
+                padding: 55px 18px;
+            }
+
+            section {
+                margin-bottom: 65px;
+            }
+        }
+    </style>
 </head>
 
 <body>
