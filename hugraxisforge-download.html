@@ -1,3 +1,4 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,138 +8,120 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Download — HugraxisForge | HugraxisForge Studio</title>
+<title>Get the Game — HugraxisForge | HugraxisForge Studio</title>
 
-<meta name="description" content="Download HugraxisForge and get access to the latest version of the game.">
+<meta name="description"
+content="Get HugraxisForge. Create a player account to access the game and begin your trial.">
 
-<link rel="canonical" href="https://hugraxisforge.com/hugraxisforge-download.html">
+<link rel="canonical"
+href="https://hugraxisforge.com/hugraxisforge-download.html">
 
 <style>
 
 body {
     margin: 0;
+    font-family: Arial, sans-serif;
     background: #0b0f14;
-    color: #d7e3ea;
-    font-family: Arial, Helvetica, sans-serif;
+    color: #d8e2e8;
     line-height: 1.6;
 }
 
 header {
-    background: #0d131a;
+    background: #0e141b;
     border-bottom: 1px solid #26323d;
     padding: 20px 40px;
 }
 
-.header-container {
-    max-width: 1100px;
-    margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+header h1 {
+    margin: 0;
+    color: #70c9e8;
+    font-size: 24px;
 }
 
-.logo {
-    color: #70c9e8;
-    font-size: 1.4rem;
-    font-weight: bold;
+nav {
+    margin-top: 10px;
 }
 
 nav a {
-    color: #b8c8d2;
+    color: #b7c7d1;
     text-decoration: none;
-    margin-left: 25px;
+    margin-right: 20px;
 }
 
 nav a:hover {
     color: #70c9e8;
 }
 
-.container {
-    max-width: 1000px;
-    margin: auto;
-    padding: 70px 30px;
+main {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
 }
 
 .hero {
     text-align: center;
-    margin-bottom: 60px;
+    margin-bottom: 40px;
 }
 
-.hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
+.hero h2 {
+    font-size: 40px;
     color: #ffffff;
+    margin-bottom: 10px;
 }
 
 .hero p {
-    color: #9fb2bd;
-    font-size: 1.1rem;
+    color: #9eabb4;
+    max-width: 650px;
+    margin: 0 auto;
 }
 
-.section {
-    margin-bottom: 50px;
-}
-
-.section h2 {
-    color: #70c9e8;
-    margin-bottom: 20px;
-}
-
-.download-card {
-    background: linear-gradient(145deg, #111820, #0e141b);
+.get-game-box {
     border: 1px solid #26323d;
+    background: #111820;
+    padding: 35px;
     border-radius: 6px;
-    padding: 40px;
     text-align: center;
 }
 
-.download-card h3 {
-    color: #ffffff;
-    font-size: 1.6rem;
+.get-game-box h3 {
+    color: #70c9e8;
     margin-top: 0;
 }
 
-.download-card p {
-    color: #aebfc9;
-    max-width: 650px;
-    margin: 0 auto 25px auto;
+.get-game-box p {
+    color: #aebbc4;
 }
 
-.download-button {
+.button {
     display: inline-block;
-    padding: 13px 28px;
-    background: #70c9e8;
-    color: #0b0f14;
+    margin: 15px 8px 0;
+    padding: 11px 22px;
+    border: 1px solid #70c9e8;
+    border-radius: 4px;
+    color: #70c9e8;
     text-decoration: none;
     font-weight: bold;
-    border-radius: 4px;
 }
 
-.download-button:hover {
-    opacity: 0.85;
-}
-
-.status {
-    display: block;
-    margin-top: 15px;
-    color: #71818b;
-    font-size: 0.9rem;
+.button:hover {
+    background: #70c9e8;
+    color: #0b0f14;
 }
 
 .info-box {
-    background: linear-gradient(145deg, #111820, #0e141b);
-    border: 1px solid #26323d;
-    border-radius: 6px;
-    padding: 30px;
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 3px solid #70c9e8;
+    background: #0e141b;
 }
 
-.info-box p {
-    color: #aebfc9;
+.info-box strong {
+    color: #ffffff;
 }
 
 .back-link {
     display: inline-block;
-    margin-top: 30px;
+    margin-top: 35px;
     color: #70c9e8;
     text-decoration: none;
 }
@@ -148,34 +131,25 @@ nav a:hover {
 }
 
 footer {
-    border-top: 1px solid #26323d;
-    padding: 30px;
     text-align: center;
-    color: #71818b;
-    font-size: 0.9rem;
+    margin-top: 70px;
+    padding: 30px;
+    border-top: 1px solid #26323d;
+    color: #71808a;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 600px) {
 
     header {
         padding: 20px;
     }
 
-    .header-container {
-        flex-direction: column;
-        gap: 15px;
+    .hero h2 {
+        font-size: 32px;
     }
 
-    nav a {
-        margin: 0 8px;
-    }
-
-    .hero h1 {
-        font-size: 2.3rem;
-    }
-
-    .download-card {
-        padding: 30px 20px;
+    .get-game-box {
+        padding: 25px;
     }
 
 }
@@ -188,100 +162,93 @@ footer {
 
 <header>
 
-    <div class="header-container">
+    <h1>HugraxisForge</h1>
 
-        <div class="logo">
-            HugraxisForge Studio
-        </div>
-
-        <nav>
-            <a href="index.html">Studio</a>
-            <a href="hugraxisforge.html">HugraxisForge</a>
-        </nav>
-
-    </div>
+    <nav>
+        <a href="index.html">Studio</a>
+        <a href="hugraxisforge.html">Game</a>
+        <a href="hugraxisforge-progress.html">Development</a>
+        <a href="hugraxisforge-news.html">News</a>
+    </nav>
 
 </header>
 
 
-<main class="container">
+<main>
+
+<section class="hero">
+
+    <h2>Get HugraxisForge</h2>
+
+    <p>
+        Create a HugraxisForge player account to get access
+        to the game and its player services.
+    </p>
+
+</section>
 
 
-    <section class="hero">
+<section class="get-game-box">
 
-        <h1>Download HugraxisForge</h1>
+    <h3>Your Journey Starts Here</h3>
 
-        <p>
-            Get the latest version of HugraxisForge
-            and begin your journey.
-        </p>
+    <p>
+        A HugraxisForge account is required before the game
+        can be downloaded.
+    </p>
 
-    </section>
+    <p>
+        New players receive a 30-day trial.
+        Your account keeps track of your trial and game access.
+    </p>
 
-
-    <section class="section">
-
-        <div class="download-card">
-
-            <h3>HugraxisForge</h3>
-
-            <p>
-                HugraxisForge is currently in development.
-                The public download will become available
-                when the game reaches its release stage.
-            </p>
-
-            <a href="#" class="download-button">
-                Download
-            </a>
-
-            <span class="status">
-                Currently unavailable — Development Build
-            </span>
-
-        </div>
-
-    </section>
-
-
-    <section class="section">
-
-        <h2>About Downloads</h2>
-
-        <div class="info-box">
-
-            <p>
-                HugraxisForge downloads will eventually be
-                provided through this page.
-            </p>
-
-            <p>
-                As development progresses, the download
-                system may include player accounts, secure
-                access, version management, and other
-                protections designed to keep the distribution
-                system reliable.
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <a class="back-link" href="hugraxisforge.html">
-        ← Back to HugraxisForge
+    <a href="hugraxisforge-account-create.html" class="button">
+        Create Account
     </a>
 
+    <a href="hugraxisforge-login.html" class="button">
+        Log In
+    </a>
+
+</section>
+
+
+<section class="info-box">
+
+    <p>
+        <strong>Why do I need an account?</strong>
+    </p>
+
+    <p>
+        Your account manages your game access, trial status,
+        player profile, and optional online services such as
+        the international leaderboard.
+    </p>
+
+    <p>
+        HugraxisForge remains local-first. An account does not
+        mean you need to be online every time you play.
+    </p>
+
+</section>
+
+
+<a href="hugraxisforge.html" class="back-link">
+    ← Back to HugraxisForge
+</a>
 
 </main>
 
 
 <footer>
 
-    HugraxisForge Studio · Independent games, software & experiments
+    <p>
+        HugraxisForge Studio — Independent games, software & experiments
+    </p>
 
 </footer>
 
 </body>
 
 </html>
+```
