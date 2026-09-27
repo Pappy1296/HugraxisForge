@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Development Progress — HugraxisForge | HugraxisForge Studio</title>
+
+    <meta name="description"
+        content="Follow the development progress, milestones, systems, and future plans of HugraxisForge.">
+
+    <link rel="canonical" href="https://hugraxisforge.com/hugraxisforge-progress.html">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #d8e0e8;
+            line-height: 1.7;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 30px;
+            background: #0b0f14;
+            border-bottom: 1px solid #26323d;
+        }
+
+        nav a {
+            color: #aebbc7;
+            text-decoration: none;
+            margin-left: 22px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #70c9e8;
+        }
+
+        nav > div:first-child a {
+            color: #e8f0f7;
+            font-weight: bold;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-left: 0;
+        }
+
+        header {
+            min-height: 45vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 1px solid #26323d;
+
+            background:
+                linear-gradient(
+                    rgba(11, 15, 20, 0.90),
+                    rgba(11, 15, 20, 0.96)
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 39px,
+                    #18222c 40px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 39px,
+                    #18222c 40px
+                );
+        }
+
+        header h1 {
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            letter-spacing: 0.08em;
+            color: #e8f0f7;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: #70c9e8;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        main {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 25px;
+        }
+
+        section {
+            margin-bottom: 90px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #e8f0f7;
+            margin-bottom: 25px;
+            letter-spacing: 0.06em;
+            border-left: 3px solid #70c9e8;
+            padding-left: 15px;
+        }
+
+        section p {
+            max-width: 800px;
+            color: #aebbc7;
+            margin-bottom: 15px;
+        }
+
+        .status-panel {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .status-card {
+            background: linear-gradient(145deg, #111820, #0e141b);
+            border: 1px solid #26323d;
+            border-radius: 6px;
+            padding: 25px;
+        }
+
+        .status-card h3 {
+            color: #8fa2b1;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .status-card strong {
+            color: #70c9e8;
+            font-size: 1.15rem;
+        }
+
+        article {
+            position: relative;
+            background: linear-gradient(145deg, #111820, #0e141b);
+            border: 1px solid #26323d;
+            border-radius: 6px;
+            padding: 30px;
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        article::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #70c9e8;
+            opacity: 0.65;
+        }
+
+        article h3 {
+            color: #70c9e8;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+            letter-spacing: 0.04em;
+        }
+
+        .milestone {
+            border-left: 1px solid #3c4b57;
+            margin-top: 30px;
+            padding-left: 30px;
+        }
+
+        .milestone-item {
+            position: relative;
+            margin-bottom: 35px;
+        }
+
+        .milestone-item::before {
+            content: "";
+            position: absolute;
+            left: -37px;
+            top: 7px;
+            width: 12px;
+            height: 12px;
+            border: 2px solid #70c9e8;
+            background: #0b0f14;
+            border-radius: 50%;
+        }
+
+        .milestone-item h3 {
+            color: #70c9e8;
+            margin-bottom: 5px;
+        }
+
+        .milestone-item p {
+            margin-bottom: 0;
+        }
+
+        .planned {
+            opacity: 0.75;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 4px 9px;
+            border: 1px solid #3c4b57;
+            border-radius: 3px;
+            color: #8fa2b1;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px solid #26323d;
+            color: #71808c;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 18px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            header {
+                min-height: 40vh;
+            }
+
+            header h1 {
+                letter-spacing: 0.04em;
+            }
+
+            main {
+                padding: 55px 18px;
+            }
+
+            section {
+                margin-bottom: 65px;
+            }
+
+            .status-panel {
+                grid-template-columns: 1fr;
+            }
+
+            .milestone {
+                padding-left: 25px;
+            }
+
+            .milestone-item::before {
+                left: -32px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div>
+            <a href="index.html">HugraxisForge Studio</a>
+        </div>
+
+        <div>
+            <a href="hugraxisforge.html">HugraxisForge</a>
+            <a href="hugraxisforge.html#game">Game</a>
+            <a href="index.html">Studio</a>
+        </div>
+
+    </nav>
+
+
+    <header>
+
+        <h1>Development</h1>
+
+        <p>Building HugraxisForge</p>
+
+    </header>
+
+
+    <main>
+
+        <!-- CURRENT STATUS -->
+
+        <section>
+
+            <h2>Current Status</h2>
+
+            <p>
+                HugraxisForge is currently in development at
+                HugraxisForge Studio.
+            </p>
+
+            <div class="status-panel">
+
+                <div class="status-card">
+
+                    <h3>Development Stage</h3>
+
+                    <strong>In Development</strong>
+
+                </div>
+
+
+                <div class="status-card">
+
+                    <h3>Current Version</h3>
+
+                    <strong>Pre-Release</strong>
+
+                </div>
+
+
+                <div class="status-card">
+
+                    <h3>Public Release</h3>
+
+                    <strong>Not Yet Available</strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CURRENT WORK -->
+
+        <section>
+
+            <h2>Currently Building</h2>
+
+            <article>
+
+                <span class="badge">Active Development</span>
+
+                <h3>Core Game Systems</h3>
+
+                <p>
+                    Development is focused on establishing the core systems
+                    that will form the foundation of the HugraxisForge
+                    experience.
+                </p>
+
+                <p>
+                    These systems will support challenges, progression,
+                    deliberate practice, player development, and future
+                    expansion of the game.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- MILESTONES -->
+
+        <section>
+
+            <h2>Development Milestones</h2>
+
+            <p>
+                This section will become the development history of
+                HugraxisForge as the project progresses.
+            </p>
+
+            <div class="milestone">
+
+                <div class="milestone-item">
+
+                    <span class="badge">Current</span>
+
+                    <h3>Foundation</h3>
+
+                    <p>
+                        Establishing the core concept, gameplay direction,
+                        progression structure, and fundamental systems.
+                    </p>
+
+                </div>
+
+
+                <div class="milestone-item planned">
+
+                    <span class="badge">Planned</span>
+
+                    <h3>Core Gameplay</h3>
+
+                    <p>
+                        Expanding the playable experience and implementing
+                        the systems required for meaningful challenges and
+                        progression.
+                    </p>
+
+                </div>
+
+
+                <div class="milestone-item planned">
+
+                    <span class="badge">Planned</span>
+
+                    <h3>Progression & Practice</h3>
+
+                    <p>
+                        Developing systems that allow players to track
+                        development and practice areas of weakness.
+                    </p>
+
+                </div>
+
+
+                <div class="milestone-item planned">
+
+                    <span class="badge">Planned</span>
+
+                    <h3>Testing</h3>
+
+                    <p>
+                        Testing gameplay systems, balancing challenges, and
+                        refining the player experience.
+                    </p>
+
+                </div>
+
+
+                <div class="milestone-item planned">
+
+                    <span class="badge">Planned</span>
+
+                    <h3>Release Preparation</h3>
+
+                    <p>
+                        Preparing distribution, accounts, downloads,
+                        documentation, and supporting online services.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FUTURE -->
+
+        <section>
+
+            <h2>What's Coming Next</h2>
+
+            <article>
+
+                <h3>Development Updates</h3>
+
+                <p>
+                    As development progresses, this page will be updated
+                    with completed systems, milestones, screenshots,
+                    technical progress, and other development information.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>Player Progress</h3>
+
+                <p>
+                    A future online system may allow players to view their
+                    own progress and achievements through their HugraxisForge
+                    account.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>Leaderboard</h3>
+
+                <p>
+                    A future leaderboard system will provide a way for
+                    players to compare their achievements and progress.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- BACK TO GAME -->
+
+        <section>
+
+            <h2>HugraxisForge</h2>
+
+            <p>
+                Return to the main HugraxisForge game page to learn more
+                about the project.
+            </p>
+
+            <p>
+                <a href="hugraxisforge.html"
+                    style="color:#70c9e8; text-decoration:none;">
+                    ← Back to HugraxisForge
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 HugraxisForge Studio. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
