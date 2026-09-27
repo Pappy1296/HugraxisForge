@@ -1,0 +1,306 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Player Account — HugraxisForge | HugraxisForge Studio</title>
+
+<meta name="description"
+content="Manage your HugraxisForge player account, game access, progress, leaderboard status, and Travellers Bulletin.">
+
+<link rel="canonical"
+href="https://hugraxisforge.com/hugraxisforge-account.html">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f14;
+    color: #d8e2e8;
+    line-height: 1.6;
+}
+
+header {
+    background: #0e141b;
+    border-bottom: 1px solid #26323d;
+    padding: 20px 40px;
+}
+
+header h1 {
+    margin: 0;
+    color: #70c9e8;
+    font-size: 24px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #b7c7d1;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #70c9e8;
+}
+
+main {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.hero {
+    margin-bottom: 40px;
+}
+
+.hero h2 {
+    font-size: 38px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.hero p {
+    color: #9eabb4;
+}
+
+.account-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.account-card {
+    border: 1px solid #26323d;
+    background: #111820;
+    padding: 25px;
+    border-radius: 6px;
+}
+
+.account-card h3 {
+    margin-top: 0;
+    color: #70c9e8;
+}
+
+.account-card p {
+    color: #aebbc4;
+}
+
+.status {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 6px 12px;
+    border: 1px solid #70c9e8;
+    border-radius: 4px;
+    color: #70c9e8;
+    font-size: 14px;
+}
+
+.account-info {
+    margin-bottom: 10px;
+}
+
+.account-info strong {
+    color: #ffffff;
+}
+
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border: 1px solid #70c9e8;
+    border-radius: 4px;
+    color: #70c9e8;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: #70c9e8;
+    color: #0b0f14;
+}
+
+footer {
+    text-align: center;
+    margin-top: 70px;
+    padding: 30px;
+    border-top: 1px solid #26323d;
+    color: #71808a;
+}
+
+@media (max-width: 700px) {
+
+    .account-grid {
+        grid-template-columns: 1fr;
+    }
+
+    header {
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>HugraxisForge</h1>
+
+    <nav>
+        <a href="index.html">Studio</a>
+        <a href="hugraxisforge.html">Game</a>
+        <a href="hugraxisforge-progress.html">Development</a>
+        <a href="hugraxisforge-news.html">News</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <h2>Player Account</h2>
+
+    <p>
+        Welcome to your HugraxisForge player account.
+        Manage your game access, profile, progress, and player services.
+    </p>
+
+</section>
+
+
+<section class="account-grid">
+
+
+    <div class="account-card">
+
+        <h3>Profile</h3>
+
+        <div class="account-info">
+            <strong>Public Player Name</strong>
+        </div>
+
+        <p>
+            Your public player name is the name other players
+            may see on the international leaderboard.
+        </p>
+
+        <span class="status">Player Profile</span>
+
+    </div>
+
+
+    <div class="account-card">
+
+        <h3>License</h3>
+
+        <div class="account-info">
+            <strong>Status:</strong> Trial
+        </div>
+
+        <div class="account-info">
+            <strong>Trial Remaining:</strong> 30 Days
+        </div>
+
+        <p>
+            Your HugraxisForge trial and purchase status
+            will be managed through your account.
+        </p>
+
+        <span class="status">Trial</span>
+
+    </div>
+
+
+    <div class="account-card">
+
+        <h3>Get the Game</h3>
+
+        <p>
+            Access the current HugraxisForge game build
+            available to your account.
+        </p>
+
+        <a href="hugraxisforge-download.html" class="button">
+            Get HugraxisForge
+        </a>
+
+    </div>
+
+
+    <div class="account-card">
+
+        <h3>My Progress</h3>
+
+        <p>
+            Your game progress, achievements, levels,
+            practice history, and other player statistics.
+        </p>
+
+        <span class="status">Coming Later</span>
+
+    </div>
+
+
+    <div class="account-card">
+
+        <h3>Leaderboard</h3>
+
+        <p>
+            View international player rankings and
+            see your current position among participating players.
+        </p>
+
+        <span class="status">Account Only</span>
+
+    </div>
+
+
+    <div class="account-card">
+
+        <h3>Travellers Bulletin</h3>
+
+        <p>
+            Follow HugraxisForge news, events,
+            announcements, and important game updates.
+        </p>
+
+        <span class="status">Coming Later</span>
+
+    </div>
+
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <p>
+        HugraxisForge Studio — Independent games, software & experiments
+    </p>
+
+</footer>
+
+</body>
+
+</html>
+```
