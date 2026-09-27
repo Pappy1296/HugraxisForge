@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>News & Updates — HugraxisForge | HugraxisForge Studio</title>
+
+    <meta name="description"
+        content="News, announcements, and development updates from HugraxisForge Studio about HugraxisForge.">
+
+    <link rel="canonical" href="https://hugraxisforge.com/hugraxisforge-news.html">
+
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #d8e0e8;
+            line-height: 1.7;
+        }
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 30px;
+            background: #0b0f14;
+            border-bottom: 1px solid #26323d;
+        }
+
+        nav a {
+            color: #aebbc7;
+            text-decoration: none;
+            margin-left: 22px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #70c9e8;
+        }
+
+        nav > div:first-child a {
+            color: #e8f0f7;
+            font-weight: bold;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-left: 0;
+        }
+
+        header {
+            min-height: 45vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 1px solid #26323d;
+
+            background:
+                linear-gradient(
+                    rgba(11, 15, 20, 0.90),
+                    rgba(11, 15, 20, 0.96)
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 39px,
+                    #18222c 40px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 39px,
+                    #18222c 40px
+                );
+        }
+
+        header h1 {
+            font-size: clamp(2.8rem, 7vw, 5.5rem);
+            letter-spacing: 0.08em;
+            color: #e8f0f7;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            color: #70c9e8;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 80px 25px;
+        }
+
+        section {
+            margin-bottom: 90px;
+        }
+
+        section h2 {
+            font-size: 2rem;
+            color: #e8f0f7;
+            margin-bottom: 25px;
+            letter-spacing: 0.06em;
+            border-left: 3px solid #70c9e8;
+            padding-left: 15px;
+        }
+
+        section > p {
+            max-width: 800px;
+            color: #aebbc7;
+            margin-bottom: 15px;
+        }
+
+        .news-entry {
+            position: relative;
+            background: linear-gradient(145deg, #111820, #0e141b);
+            border: 1px solid #26323d;
+            border-radius: 6px;
+            padding: 30px;
+            margin-top: 25px;
+            overflow: hidden;
+            transition:
+                border-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .news-entry::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #70c9e8;
+            opacity: 0.65;
+        }
+
+        .news-entry:hover {
+            border-color: #70c9e8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .news-date {
+            color: #8fa2b1;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .news-entry h3 {
+            color: #70c9e8;
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+            letter-spacing: 0.04em;
+        }
+
+        .news-entry p {
+            color: #aebbc7;
+            margin-bottom: 15px;
+        }
+
+        .news-entry p:last-child {
+            margin-bottom: 0;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 4px 9px;
+            border: 1px solid #3c4b57;
+            border-radius: 3px;
+            color: #8fa2b1;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-top: 5px;
+        }
+
+        .empty-message {
+            background: #111820;
+            border: 1px solid #26323d;
+            border-radius: 6px;
+            padding: 30px;
+            color: #8fa2b1;
+        }
+
+        .back-link {
+            color: #70c9e8;
+            text-decoration: none;
+        }
+
+        .back-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px solid #26323d;
+            color: #71808c;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 18px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            header {
+                min-height: 40vh;
+            }
+
+            header h1 {
+                letter-spacing: 0.04em;
+            }
+
+            main {
+                padding: 55px 18px;
+            }
+
+            section {
+                margin-bottom: 65px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+
+        <div>
+            <a href="index.html">HugraxisForge Studio</a>
+        </div>
+
+        <div>
+            <a href="hugraxisforge.html">HugraxisForge</a>
+            <a href="hugraxisforge-progress.html">Development</a>
+            <a href="index.html">Studio</a>
+        </div>
+
+    </nav>
+
+
+    <header>
+
+        <h1>News & Updates</h1>
+
+        <p>HugraxisForge Development News</p>
+
+    </header>
+
+
+    <main>
+
+        <section>
+
+            <h2>Latest Updates</h2>
+
+            <p>
+                Follow announcements, development updates, and important
+                news about HugraxisForge as the project progresses.
+            </p>
+
+
+            <div class="news-entry">
+
+                <div class="news-date">
+                    September 2026
+                </div>
+
+                <h3>HugraxisForge Development Continues</h3>
+
+                <p>
+                    HugraxisForge is currently in development at
+                    HugraxisForge Studio.
+                </p>
+
+                <p>
+                    The project is being developed around challenges,
+                    progression, deliberate practice, concentration, and
+                    player development.
+                </p>
+
+                <span class="status">Development Update</span>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>What Comes Next</h2>
+
+            <div class="empty-message">
+
+                <p>
+                    More development news will be added here as new
+                    milestones and features are completed.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <section>
+
+            <h2>HugraxisForge</h2>
+
+            <p>
+                Return to the main HugraxisForge page to explore the game
+                and follow its development.
+            </p>
+
+            <p>
+                <a class="back-link" href="hugraxisforge.html">
+                    ← Back to HugraxisForge
+                </a>
+            </p>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+
+        <p>
+            &copy; 2026 HugraxisForge Studio. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
