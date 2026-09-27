@@ -1,0 +1,404 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Account — HugraxisForge | HugraxisForge Studio</title>
+
+<meta name="description"
+content="Create a HugraxisForge player account to access the game and player services.">
+
+<link rel="canonical"
+href="https://hugraxisforge.com/hugraxisforge-account-create.html">
+
+<style>
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #0b0f14;
+    color: #d8e2e8;
+    line-height: 1.6;
+}
+
+header {
+    background: #0e141b;
+    border-bottom: 1px solid #26323d;
+    padding: 20px 40px;
+}
+
+header h1 {
+    margin: 0;
+    color: #70c9e8;
+    font-size: 24px;
+}
+
+nav {
+    margin-top: 10px;
+}
+
+nav a {
+    color: #b7c7d1;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav a:hover {
+    color: #70c9e8;
+}
+
+main {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.hero h2 {
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    color: #9eabb4;
+}
+
+.account-form {
+    border: 1px solid #26323d;
+    background: #111820;
+    padding: 30px;
+    border-radius: 6px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.form-group input {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 11px;
+    background: #0b0f14;
+    border: 1px solid #34434f;
+    border-radius: 4px;
+    color: #ffffff;
+    font-size: 15px;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #70c9e8;
+}
+
+.form-help {
+    margin-top: 5px;
+    color: #71808a;
+    font-size: 13px;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 25px 0;
+}
+
+.checkbox-group input {
+    margin-top: 5px;
+}
+
+.checkbox-group label {
+    color: #aebbc4;
+    font-size: 14px;
+}
+
+.checkbox-group a {
+    color: #70c9e8;
+}
+
+.button {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    border: 1px solid #70c9e8;
+    border-radius: 4px;
+    background: transparent;
+    color: #70c9e8;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.button:hover {
+    background: #70c9e8;
+    color: #0b0f14;
+}
+
+.account-links {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.account-links a {
+    color: #70c9e8;
+    text-decoration: none;
+}
+
+.account-links a:hover {
+    text-decoration: underline;
+}
+
+.info-box {
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 3px solid #70c9e8;
+    background: #0e141b;
+}
+
+.info-box strong {
+    color: #ffffff;
+}
+
+.back-link {
+    display: inline-block;
+    margin-top: 30px;
+    color: #70c9e8;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    margin-top: 70px;
+    padding: 30px;
+    border-top: 1px solid #26323d;
+    color: #71808a;
+}
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .hero h2 {
+        font-size: 30px;
+    }
+
+    .account-form {
+        padding: 25px;
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>HugraxisForge</h1>
+
+    <nav>
+        <a href="index.html">Studio</a>
+        <a href="hugraxisforge.html">Game</a>
+        <a href="hugraxisforge-progress.html">Development</a>
+        <a href="hugraxisforge-news.html">News</a>
+    </nav>
+
+</header>
+
+
+<main>
+
+<section class="hero">
+
+    <h2>Create Your Account</h2>
+
+    <p>
+        Create your HugraxisForge player account to get the game
+        and begin your journey.
+    </p>
+
+</section>
+
+
+<form class="account-form">
+
+
+    <div class="form-group">
+
+        <label for="email">
+            Email Address
+        </label>
+
+        <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+        >
+
+        <div class="form-help">
+            Your email is used for account access and verification.
+        </div>
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="password">
+            Password
+        </label>
+
+        <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Create a password"
+            required
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="confirm-password">
+            Confirm Password
+        </label>
+
+        <input
+            type="password"
+            id="confirm-password"
+            name="confirm-password"
+            placeholder="Enter your password again"
+            required
+        >
+
+    </div>
+
+
+    <div class="form-group">
+
+        <label for="player-name">
+            Public Player Name
+        </label>
+
+        <input
+            type="text"
+            id="player-name"
+            name="player-name"
+            placeholder="Choose your player name"
+            maxlength="30"
+            required
+        >
+
+        <div class="form-help">
+            This is the name that may appear on the international leaderboard.
+        </div>
+
+    </div>
+
+
+    <div class="checkbox-group">
+
+        <input
+            type="checkbox"
+            id="terms"
+            name="terms"
+            required
+        >
+
+        <label for="terms">
+            I agree to the HugraxisForge
+            <a href="#">Terms of Service</a>
+            and
+            <a href="#">Privacy Policy</a>.
+        </label>
+
+    </div>
+
+
+    <button type="submit" class="button">
+        Create Account
+    </button>
+
+
+</form>
+
+
+<div class="account-links">
+
+    <p>
+        Already have an account?
+        <a href="hugraxisforge-login.html">
+            Log In
+        </a>
+    </p>
+
+</div>
+
+
+<section class="info-box">
+
+    <p>
+        <strong>What happens next?</strong>
+    </p>
+
+    <p>
+        After creating your account, you will need to verify
+        your email address. Once your account is verified,
+        HugraxisForge will become available to you.
+    </p>
+
+    <p>
+        Your 30-day trial will begin when your account is activated.
+    </p>
+
+</section>
+
+
+<a href="hugraxisforge-download.html" class="back-link">
+    ← Back to Get the Game
+</a>
+
+</main>
+
+
+<footer>
+
+    <p>
+        HugraxisForge Studio — Independent games, software & experiments
+    </p>
+
+</footer>
+
+</body>
+
+</html>
+```
