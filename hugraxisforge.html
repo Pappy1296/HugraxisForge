@@ -7,247 +7,411 @@
 
     <title>HugraxisForge — Game | HugraxisForge Studio</title>
 
-    <meta name="description" content="HugraxisForge is a gamified learning and cognitive training game built around challenges, progression, and deliberate practice.">
+    <meta name="description"
+        content="HugraxisForge is a gamified learning and cognitive training game built around challenges, progression, deliberate practice, and concentration.">
 
     <link rel="canonical" href="https://hugraxisforge.com/hugraxisforge.html">
 
-  <style>
-    * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-    }
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-    body {
-        font-family: Arial, Helvetica, sans-serif;
-        background: #0b0f14;
-        color: #d8e0e8;
-        line-height: 1.7;
-    }
-
-    nav {
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 18px 30px;
-        background: #0b0f14;
-        border-bottom: 1px solid #26323d;
-    }
-
-    nav a {
-        color: #aebbc7;
-        text-decoration: none;
-        margin-left: 22px;
-        transition: color 0.2s ease;
-    }
-
-    nav a:hover {
-        color: #70c9e8;
-    }
-
-    nav > div:first-child a {
-        color: #e8f0f7;
-        font-weight: bold;
-        letter-spacing: 0.08em;
-        text-transform: uppercase;
-        margin-left: 0;
-    }
-
-    header {
-        min-height: 60vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        padding: 50px 20px;
-        border-bottom: 1px solid #26323d;
-
-        background:
-            linear-gradient(
-                rgba(11, 15, 20, 0.90),
-                rgba(11, 15, 20, 0.96)
-            ),
-            repeating-linear-gradient(
-                0deg,
-                transparent,
-                transparent 39px,
-                #18222c 40px
-            ),
-            repeating-linear-gradient(
-                90deg,
-                transparent,
-                transparent 39px,
-                #18222c 40px
-            );
-    }
-
-    header h1 {
-        font-size: clamp(3.5rem, 9vw, 7rem);
-        letter-spacing: 0.08em;
-        color: #e8f0f7;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-    }
-
-    header p {
-    font-size: 1.15rem;
-    color: #70c9e8;
-    letter-spacing: 0.12em;
-    text-transform: uppercase;
-    }
-    
-    header strong {
-        margin-top: 20px;
-        padding: 6px 14px;
-        border: 1px solid #3c4b57;
-        border-radius: 3px;
-        color: #8fa2b1;
-        font-size: 0.75rem;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-    }
-
-    main {
-        max-width: 1100px;
-        margin: 0 auto;
-        padding: 80px 25px;
-    }
-
-    section {
-        margin-bottom: 90px;
-    }
-
-    section h2 {
-        font-size: 2rem;
-        color: #e8f0f7;
-        margin-bottom: 25px;
-        letter-spacing: 0.06em;
-        border-left: 3px solid #70c9e8;
-        padding-left: 15px;
-    }
-
-    section p {
-        max-width: 800px;
-        color: #aebbc7;
-        margin-bottom: 15px;
-    }
-
-    article {
-        position: relative;
-        background: linear-gradient(145deg, #111820, #0e141b);
-        border: 1px solid #26323d;
-        border-radius: 6px;
-        padding: 30px;
-        margin-top: 20px;
-        overflow: hidden;
-        transition:
-            border-color 0.2s ease,
-            transform 0.2s ease,
-            box-shadow 0.2s ease;
-    }
-
-    article::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 4px;
-        height: 100%;
-        background: #70c9e8;
-        opacity: 0.65;
-    }
-
-    article:hover {
-        border-color: #70c9e8;
-        transform: translateY(-3px);
-        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
-    }
-
-    article h3 {
-        color: #70c9e8;
-        margin-bottom: 12px;
-        font-size: 1.4rem;
-        letter-spacing: 0.04em;
-    }
-
-    strong {
-        color: #70c9e8;
-    }
-
-    footer {
-        text-align: center;
-        padding: 35px 20px;
-        border-top: 1px solid #26323d;
-        color: #71808c;
-        font-size: 0.9rem;
-    }
-
-    @media (max-width: 600px) {
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b0f14;
+            color: #d8e0e8;
+            line-height: 1.7;
+        }
 
         nav {
-            flex-direction: column;
-            gap: 12px;
-            padding: 15px 18px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 30px;
+            background: #0b0f14;
+            border-bottom: 1px solid #26323d;
         }
 
         nav a {
-            margin-left: 10px;
-            margin-right: 10px;
+            color: #aebbc7;
+            text-decoration: none;
+            margin-left: 22px;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #70c9e8;
+        }
+
+        nav > div:first-child a {
+            color: #e8f0f7;
+            font-weight: bold;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            margin-left: 0;
         }
 
         header {
-            min-height: 55vh;
+            min-height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 1px solid #26323d;
+
+            background:
+                linear-gradient(
+                    rgba(11, 15, 20, 0.90),
+                    rgba(11, 15, 20, 0.96)
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 39px,
+                    #18222c 40px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 39px,
+                    #18222c 40px
+                );
         }
 
         header h1 {
-            letter-spacing: 0.04em;
+            font-size: clamp(3.5rem, 9vw, 7rem);
+            letter-spacing: 0.08em;
+            color: #e8f0f7;
+            text-transform: uppercase;
+            margin-bottom: 15px;
         }
 
         header p {
-            font-size: 0.9rem;
+            font-size: 1.15rem;
+            color: #70c9e8;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        header strong {
+            margin-top: 20px;
+            padding: 6px 14px;
+            border: 1px solid #3c4b57;
+            border-radius: 3px;
+            color: #8fa2b1;
+            font-size: 0.75rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
         }
 
         main {
-            padding: 55px 18px;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 80px 25px;
         }
 
         section {
-            margin-bottom: 65px;
+            margin-bottom: 90px;
         }
-    }
-</style>
+
+        section h2 {
+            font-size: 2rem;
+            color: #e8f0f7;
+            margin-bottom: 25px;
+            letter-spacing: 0.06em;
+            border-left: 3px solid #70c9e8;
+            padding-left: 15px;
+        }
+
+        section p {
+            max-width: 800px;
+            color: #aebbc7;
+            margin-bottom: 15px;
+        }
+
+        /* Game Hub */
+
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .hub-card {
+            position: relative;
+            background: linear-gradient(145deg, #111820, #0e141b);
+            border: 1px solid #26323d;
+            border-radius: 6px;
+            padding: 30px;
+            min-height: 190px;
+            overflow: hidden;
+            transition:
+                border-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        .hub-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #70c9e8;
+            opacity: 0.65;
+        }
+
+        .hub-card:hover {
+            border-color: #70c9e8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        .hub-card h3 {
+            color: #70c9e8;
+            margin-bottom: 10px;
+            font-size: 1.4rem;
+            letter-spacing: 0.04em;
+        }
+
+        .hub-card p {
+            margin-bottom: 15px;
+        }
+
+        .status {
+            display: inline-block;
+            padding: 4px 9px;
+            border: 1px solid #3c4b57;
+            border-radius: 3px;
+            color: #8fa2b1;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Standard Articles */
+
+        article {
+            position: relative;
+            background: linear-gradient(145deg, #111820, #0e141b);
+            border: 1px solid #26323d;
+            border-radius: 6px;
+            padding: 30px;
+            margin-top: 20px;
+            overflow: hidden;
+            transition:
+                border-color 0.2s ease,
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+        }
+
+        article::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: #70c9e8;
+            opacity: 0.65;
+        }
+
+        article:hover {
+            border-color: #70c9e8;
+            transform: translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+        }
+
+        article h3 {
+            color: #70c9e8;
+            margin-bottom: 12px;
+            font-size: 1.4rem;
+            letter-spacing: 0.04em;
+        }
+
+        strong {
+            color: #70c9e8;
+        }
+
+        .download-box {
+            border: 1px solid #26323d;
+            background: #111820;
+            padding: 30px;
+            border-radius: 6px;
+            margin-top: 20px;
+        }
+
+        .download-box p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 35px 20px;
+            border-top: 1px solid #26323d;
+            color: #71808c;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 12px;
+                padding: 15px 18px;
+            }
+
+            nav a {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            header {
+                min-height: 55vh;
+            }
+
+            header h1 {
+                letter-spacing: 0.04em;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            main {
+                padding: 55px 18px;
+            }
+
+            section {
+                margin-bottom: 65px;
+            }
+
+            .hub-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
     <nav>
+
         <div>
             <a href="index.html">HugraxisForge Studio</a>
         </div>
 
         <div>
             <a href="index.html">Home</a>
-            <a href="index.html#projects">Projects</a>
-            <a href="index.html#about">About</a>
-            <a href="index.html#contact">Contact</a>
+            <a href="#game">Game</a>
+            <a href="#development">Development</a>
+            <a href="#download">Download</a>
         </div>
+
     </nav>
 
+
     <header>
+
         <h1>HugraxisForge</h1>
 
         <p>Focus. Practice. Improve.</p>
 
         <strong>IN DEVELOPMENT</strong>
+
     </header>
+
 
     <main>
 
+        <!-- GAME HUB -->
+
+        <section id="game">
+
+            <h2>HugraxisForge</h2>
+
+            <p>
+                A gamified learning and cognitive training experience built
+                around challenges, progression, deliberate practice, and
+                concentration.
+            </p>
+
+            <div class="hub-grid">
+
+                <div class="hub-card">
+
+                    <h3>Game Overview</h3>
+
+                    <p>
+                        Learn about the ideas, systems, and gameplay concepts
+                        behind HugraxisForge.
+                    </p>
+
+                    <span class="status">Available</span>
+
+                </div>
+
+
+                <div class="hub-card">
+
+                    <h3>Development Progress</h3>
+
+                    <p>
+                        Follow development milestones, completed systems,
+                        current work, and future plans.
+                    </p>
+
+                    <span class="status">Coming Soon</span>
+
+                </div>
+
+
+                <div class="hub-card">
+
+                    <h3>News & Updates</h3>
+
+                    <p>
+                        Development announcements, project updates, and
+                        important HugraxisForge news.
+                    </p>
+
+                    <span class="status">Coming Soon</span>
+
+                </div>
+
+
+                <div class="hub-card">
+
+                    <h3>Leaderboard</h3>
+
+                    <p>
+                        Compare achievements and progress with other
+                        HugraxisForge players.
+                    </p>
+
+                    <span class="status">Coming Soon</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
         <section>
+
             <h2>About the Game</h2>
 
             <p>
@@ -256,42 +420,71 @@
             </p>
 
             <p>
-                Instead of simply running independent n-back sessions, the game
-                puts the player in a progression system that adapts to the player
-                development. It focus heavily on building concentration as the
-                foundation of development.
+                Instead of simply running independent training sessions,
+                the game puts the player into a progression system that
+                adapts to the player's development.
             </p>
+
+            <p>
+                Concentration forms an important foundation of the experience,
+                while challenges and practice provide opportunities for the
+                player to develop and improve.
+            </p>
+
         </section>
 
+
+        <!-- CORE EXPERIENCE -->
+
         <section>
+
             <h2>Core Experience</h2>
 
-            <article>
-                <h3>Challenges</h3>
-                <p>
-                    Solve problems and overcome challenges, build memory through
-                    entertaining gameplay for better retention.
-                </p>
-            </article>
 
             <article>
-                <h3>Progression</h3>
+
+                <h3>Challenges</h3>
+
                 <p>
-                    Build better retention through rewards, variation, and
+                    Solve problems and overcome challenges while building
+                    memory, concentration, and retention through engaging
+                    gameplay.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>Progression</h3>
+
+                <p>
+                    Develop your abilities through rewards, variation, and
                     increasingly demanding challenges.
                 </p>
+
             </article>
+
 
             <article>
+
                 <h3>Deliberate Practice</h3>
+
                 <p>
-                    Mistakes are part of the learning process. HugraxisForge is
-                    designed around identifying weaknesses and practicing them.
+                    Mistakes are part of the learning process. HugraxisForge
+                    is designed around identifying weaknesses and practicing
+                    them.
                 </p>
+
             </article>
+
         </section>
 
-        <section>
+
+        <!-- DEVELOPMENT -->
+
+        <section id="development">
+
             <h2>Development</h2>
 
             <p>
@@ -302,24 +495,48 @@
             <p>
                 <strong>Development status: In development</strong>
             </p>
+
+            <p>
+                Development progress, milestones, news, and other project
+                information will be added to this site as the game develops.
+            </p>
+
         </section>
 
-        <section>
+
+        <!-- DOWNLOAD -->
+
+        <section id="download">
+
             <h2>Download</h2>
 
-            <p>
-                HugraxisForge is not currently available for public download.
-            </p>
+            <div class="download-box">
 
-            <p>
-                A download system will be added as development progresses.
-            </p>
+                <p>
+                    HugraxisForge is not currently available for public
+                    download.
+                </p>
+
+                <p>
+                    A secure download system will be added as development
+                    progresses.
+                </p>
+
+                <span class="status">Not Available</span>
+
+            </div>
+
         </section>
 
     </main>
 
+
     <footer>
-        <p>&copy; 2026 HugraxisForge Studio. All rights reserved.</p>
+
+        <p>
+            &copy; 2026 HugraxisForge Studio. All rights reserved.
+        </p>
+
     </footer>
 
 </body>
